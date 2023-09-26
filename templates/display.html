@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block title%}
+display
+{%endblock%}
+{%block body%}
+<div class="container">
+<table border="2px" bgcolor="red" >
+
+  <thead>
+  <tr>
+      <td>name</td>
+      <td>price</td>
+      <td>productcode</td>
+      <td>quantity</td>
+  </tr>
+  </thead>
+  <tbody>
+  {%for i in form%}
+  <tr>
+     <td>{{i.prd_name}}</td>
+     <td>{{i.prd_price}}</td>
+     <td>{{i.prd_code}}</td>
+     <td>{{i.prd_quantity}}</td>
+  </tr>
+  {%endfor%}
+  </tbody>
+</table>
+
+</div>
+{%endblock%}
